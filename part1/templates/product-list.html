@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Product List</title>
+</head>
+<body>
+	<!-- 美工给的模板一般是以下这个样子 -->
+	<!--
+	<h1>产品列表</h1>
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>ProductName</th>
+			<th>Price</th>
+			<th>Image</th>
+			<th>Date</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>iPhone5S</td>
+			<td>2900.00</td>
+			<td>None</td>
+			<td>2016-03-05</td>
+		</tr>
+	</table>
+	-->
+	<!-- 美工给的模板一般是以上这个样子-->
+
+	<!-- 开发时需要修改为这个样子, start-->
+	<h1>{{ pro_title }}</h1>
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>ProductName</th>
+			<th>Price</th>
+			<th>Image</th>
+			<th>Date</th>
+		</tr>
+
+		{% for item in data %}
+		<tr>
+			<td>{{ item[0] }}</td>
+			<td>{{ item[1] }}</td>
+			<td>{{ item[2] }}</td>
+			<td>{{ item[3] }}</td>
+			<td>{{ item[4] }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	<!-- 开发时需要修改为这个样子, end -->
+</body>
+</html>

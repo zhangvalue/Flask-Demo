@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div style="width:100%; height: 80px; background: #0f0; text-align: center">
+        <h1>Flask demo</h1>
+    </div>
+
+    {% block main_content %}
+    {% endblock %}
+
+    {% block footer %}
+    <!--footer section start-->
+    <div style="width:100%; height:80px; background:#ccc; text-align: center; color: #fff">
+    <footer style=" text-align:center;">
+        <span style="font-weight:bold;">餐饮会员技术部质量组&copy;2017-2018</span>
+    </footer>
+    </div>
+    <!--footer section end-->
+    {% endblock %}
+</body>
+</html>

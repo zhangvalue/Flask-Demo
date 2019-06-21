@@ -1,0 +1,57 @@
+{% extends 'layout.html'%}
+
+{% block title %} 使用模板 {% endblock %}
+
+{% block main_content %}
+    <h1>{{ title }}</h1>
+    <table border="1" cellpadding="5">
+        <tr>
+            <td>标题</td>
+            <td>
+                {{ title }}
+            </td>
+        </tr>
+        <tr>
+            <td>作者</td>
+            <td>
+                {{ users }}
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <ul>
+                    {% for user in users %}
+                        <li>{{ user }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Dict</td>
+            <td>
+                {{ book['title'] }} <br/>
+                {{ book['author'] }} <br/>
+                {{ book.get('price', 0.00) }} <br/>
+                {{ book.pubdate }}
+            </td>
+        </tr>
+        <tr>
+            <td>过滤器</td>
+            <td>
+                {{ users|join(',') }}
+            </td>
+        </tr>
+        <tr>
+            <td>普通过滤</td>
+            <td>
+                {{ ','.join(users) }}
+            </td>
+        </tr>
+    </table>
+
+{% endblock %}
+
+
+{% block footer %}
+{% endblock %}

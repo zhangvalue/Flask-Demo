@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<form action="/login/" method="post">   <!-- action 不写，表示当前请求的路径，或者写action="#", method="post" 一定要写，大小写都行-->
+    <table border="1" cellpadding="5">
+        <tr>
+            <td></td>
+            <td>管理员登录</td>
+        </tr>
+        <tr>
+            <td>邮箱</td>
+            <td>
+                <input type="email" name="email" placeholder="you@codr.cn" />
+            </td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td>
+                <input type="password" name="pwd" />
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="checkbox" name="remember" id="remember" />
+                <label for="remember">记住我！</label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" name="submit" value="登录" />
+                <input type="reset" name="reset" value="重置" />
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
